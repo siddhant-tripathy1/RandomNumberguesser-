@@ -16,7 +16,7 @@ func main() {
 	guess, _ := strconv.Atoi(os.Args[1])
 	for turn := 0; turn < maxTurn; turn++ {
 		n := rand.Intn(guess + 1)
-		if turn == 1 || n == guess {
+		if turn == 1 && n == guess {
 			fmt.Println("first shot you won ")
 			return
 		}
